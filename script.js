@@ -1,4 +1,6 @@
 let netIncomeBox = document.getElementById("netIncome");
+let spentBox = document.getElementById("moneySpent");
+
 let idealHousingBox = document.getElementById("idealHousing");
 let idealNAWBox = document.getElementById("idealNAW");
 let idealSavingsBox = document.getElementById("idealSaving");
@@ -38,37 +40,55 @@ function calculateGoodPercents() {
 	idealDebtBox.innerHTML = "0.00";
 }
 
-function getValue(e) {
-	console.log(e);
-	let value = parseInt(e.value);
-	return value;
-}
-
 netIncomeBox.addEventListener("input", () => {
 	calculateGoodPercents();
 });
 
 button.addEventListener("click", () => {
-	for (item in savingsSpent) {
+	[...savingsSpent].forEach((item) => {
 		let value = parseInt(item.value);
-		savingsSpentValue += value;
-		actualSavingsBox.innerHTML = savingsSpentValue.toFixed(2);
-	}
-	for (item in debtSpent) {
+		if (isNaN(value)) {
+			return;
+		} else {
+			savingsSpentValue += value;
+		}
+		let parsedSavings = parseInt(savingsSpentValue).toFixed(2);
+		actualSavingsBox.innerHTML = parsedSavings;
+	});
+	[...NAWSpent].forEach((item) => {
 		let value = parseInt(item.value);
-		debtSpentValue += value;
-		actualDebtBox.innerHTML = debtSpentValue.toFixed(2);
-	}
-	for (item in NAWSpent) {
-		console.log(item);
+		if (isNaN(value)) {
+			return;
+		} else {
+			NAWSpentValue += value;
+		}
+		let parsedNAW = parseInt(NAWSpentValue).toFixed(2);
+		actualNAWBox.innerHTML = parsedNAW;
+	});
+	[...debtSpent].forEach((item) => {
 		let value = parseInt(item.value);
-		NAWSpentValue += value;
+		if (isNaN(value)) {
+			return;
+		} else {
+			debtSpentValue += value;
+		}
+		let parsedDebt = parseInt(debtSpentValue).toFixed(2);
 
-		actualNAWBox.innerHTML = NAWSpentValue.toFixed(2);
-	}
-	actualHousingBox.innerHTML = parseInt(housingSpent.value).toFixed(2);
+		actualDebtBox.innerHTML = parsedDebt;
+	});
 
-	// housingSpentValue += housingSpent.forEach(getValue());
-	// NAWSpentValue += NAWSpent.forEach(getValue());
-	// debtSpentValue += debtSpent.forEach(getValue());
+	let parsedHousing = parseInt(housingSpent.value).toFixed(2);
+	if (isNaN(parsedHousing)) {
+		return;
+	} else {
+		actualHousingBox.innerHTML = parsedHousing;
+	}
+
+	let totalSpent =
+		parseInt(housingSpent.value) +
+		parseInt(debtSpentValue) +
+		parseInt(NAWSpentValue) +
+		parseInt(savingsSpentValue);
+	console.log(totalSpent);
+	spentBox.innerHTML = totalSpent.toFixed(2);
 });
