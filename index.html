@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/styles.css" />
+		<script src="/script.js" defer></script>
+		<title>25-55-20 Calculator</title>
+	</head>
+	<body>
+		<header>
+			<h1>25-55-20 Calculator</h1>
+		</header>
+		<main>
+			<section class="ideal">
+				<h3>Ideal Spending</h3>
+				<div>Net Income: $<input id="netIncome" type="number" /></div>
+				<div>(25%) Housing: $<span id="idealHousing"></span></div>
+				<div>(55%) Needs and Wants: $<span id="idealNAW"></span></div>
+				<div>(20%) Saving: $<span id="idealSaving"></span></div>
+				<div>(0%) Revolving Debt: $<span id="idealDebt"></span></div>
+			</section>
+			<section class="actual">
+				<h3>Actual Spending</h3>
+				<div>Total Spent: $<span id="moneySpent" type="number"></span></div>
+				<div>
+					<span class="percent" id="actualHousing"></span> Housing: $<span
+						id="idealHousing"
+					></span>
+				</div>
+				<div>
+					<span class="percent" id="actualNAW"></span> Needs and Wants: $<span
+						id="idealNAW"
+					></span>
+				</div>
+				<div>
+					<span class="percent" id="actualSaving"></span> Saving: $<span
+						id="idealSaving"
+					></span>
+				</div>
+				<div>
+					<span class="percent" id="actualDebt"></span> Revolving Debt: $<span
+						id="idealDebt"
+					></span>
+				</div>
+			</section>
+			<section class="budget">
+				<h3>Record of Spending</h3>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</section>
+		</main>
+		<footer>
+			<p>&#169; Ethan McFadden</p>
+		</footer>
+	</body>
+</html>
