@@ -44,7 +44,7 @@
 			</section>
 			<section class="budget">
 				<h3>Record of Spending</h3>
-				<div class="budgetInputWrapper">
+				<div class="budgetInputWrapper" id="housingWrapper">
 					<h4>Housing</h4>
 					<input type="text" placeholder="Type Purchase Here" />
 					<input
@@ -55,29 +55,40 @@
 					<button class="rowButton" id="housingButton">Add Row</button>
 				</div>
 				<div class="budgetInputWrapper">
-					<h4>Needs and Wants</h4>
-					<input type="text" placeholder="Type Purchase Here" />
-					<input type="number" class="NAWValue" placeholder="Type Value Here" />
+					<div class="budgetInputs" id="NAWWrapper">
+						<h4>Needs and Wants</h4>
+						<input type="text" placeholder="Type Purchase Here" />
+						<input
+							type="number"
+							class="NAWValue"
+							placeholder="Type Value Here"
+						/>
+					</div>
+
 					<button class="rowButton" id="NAWButton">Add Row</button>
 				</div>
 				<div class="budgetInputWrapper">
-					<h4>Savings</h4>
-					<input type="text" placeholder="Type Purchase Here" />
-					<input
-						type="number"
-						class="savingsValue"
-						placeholder="Type Value Here"
-					/>
+					<div class="budgetInputs" id="savingsWrapper">
+						<h4>Savings</h4>
+						<input type="text" placeholder="Type Purchase Here" />
+						<input
+							type="number"
+							class="savingsValue"
+							placeholder="Type Value Here"
+						/>
+					</div>
 					<button class="rowButton" id="savingsButton">Add Row</button>
 				</div>
 				<div class="budgetInputWrapper">
-					<h4>Revolving Debt</h4>
-					<input type="text" placeholder="Type Purchase Here" />
-					<input
-						type="number"
-						class="debtValue"
-						placeholder="Type Value Here"
-					/>
+					<div class="budgetInputs" id="debtWrapper">
+						<h4>Revolving Debt</h4>
+						<input type="text" placeholder="Type Purchase Here" />
+						<input
+							type="number"
+							class="debtValue"
+							placeholder="Type Value Here"
+						/>
+					</div>
 					<button class="rowButton" id="debtButton">Add Row</button>
 				</div>
 				<button id="calcButton">Calculate</button>

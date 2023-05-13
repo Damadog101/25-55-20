@@ -16,10 +16,10 @@ let actualNAWPercentBox = document.getElementById("actualNAWPercent");
 let actualSavingsPercentBox = document.getElementById("actualSavingPercent");
 let actualDebtPercentBox = document.getElementById("actualDebtPercent");
 
-let housingSpent = document.getElementById("housingValue");
-let NAWSpent = document.querySelectorAll(".NAWValue");
-let savingsSpent = document.querySelectorAll(".savingsValue");
-let debtSpent = document.querySelectorAll(".debtValue");
+// let housingButton = document.getElementById("housingButton");
+let NAWButton = document.getElementById("NAWButton");
+let savingsButton = document.getElementById("savingsButton");
+let debtButton = document.getElementById("debtButton");
 
 let NAWSpentValue = 0;
 let savingsSpentValue = 0;
@@ -47,6 +47,12 @@ netIncomeBox.addEventListener("input", () => {
 
 //calculate button
 button.addEventListener("click", () => {
+	//selects all items
+	let housingSpent = document.getElementById("housingValue");
+	let NAWSpent = document.querySelectorAll(".NAWValue");
+	let savingsSpent = document.querySelectorAll(".savingsValue");
+	let debtSpent = document.querySelectorAll(".debtValue");
+
 	//gets savings values
 	[...savingsSpent].forEach((item) => {
 		let value = parseInt(item.value);
@@ -110,4 +116,31 @@ button.addEventListener("click", () => {
 	actualSavingsPercentBox.innerHTML = `${savingsPercent.toFixed(0)}%`;
 	actualNAWPercentBox.innerHTML = `${NAWPercent.toFixed(0)}%`;
 	actualDebtPercentBox.innerHTML = `${debtPercent.toFixed(0)}%`;
+});
+
+//Add more buttons
+function addRow(rowType) {
+	let textInput = document.createElement("input");
+	let numInput = document.createElement("input");
+	textInput.setAttribute("type", "text");
+	textInput.setAttribute("placeholder", "Type Purchase Here");
+	numInput.setAttribute("type", "number");
+	numInput.setAttribute("placeholder", "Type Value Here");
+	numInput.setAttribute("class", `${rowType}Value`);
+
+	let wrapper = document.getElementById(`${rowType}Wrapper`);
+	wrapper.appendChild(textInput);
+	wrapper.appendChild(numInput);
+}
+// housingButton.addEventListener("click", () => {
+// 	addRow("housing");
+// });
+NAWButton.addEventListener("click", () => {
+	addRow("NAW");
+});
+savingsButton.addEventListener("click", () => {
+	addRow("savings");
+});
+debtButton.addEventListener("click", () => {
+	addRow("debt");
 });

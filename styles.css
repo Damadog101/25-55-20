@@ -6,6 +6,7 @@ body {
 	margin: 0;
 	padding: 0;
 	max-height: calc(100vh - 3%);
+	background: linear-gradient(to right, rgb(221, 249, 249), rgb(208, 232, 240));
 }
 
 :root {
@@ -57,6 +58,15 @@ h3 {
 	flex-wrap: wrap;
 	justify-content: center;
 }
+.budgetInputs {
+	/* overflow: auto;
+	height: 70%;
+	width: 24%; */
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
 h4 {
 	text-align: center;
 	text-decoration: underline;
@@ -69,14 +79,43 @@ input {
 }
 input {
 	width: 50%;
+	height: 26px;
+}
+header,
+footer {
+	background-color: rgb(147, 201, 245);
+	margin: 0px;
+	padding: 0.5%;
+}
+button:hover,
+button:focus {
+	background-color: rgb(165, 215, 255);
+	border: 2px solid yellow;
 }
 
-.rowButton {
-	padding: 0%;
+button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1%;
+	margin: 1%;
+	height: 27px;
+	border: 2px solid var(--blue);
+	background-color: rgb(218, 235, 249);
+	color: var(--blue);
+	font-weight: bold;
+	border-radius: 7px;
+	transition: all 0.2s ease;
 }
+
 footer {
 	width: 100%;
 	display: flex;
 	justify-content: center;
 	border: 1px solid black;
+}
+#housingButton {
+	background-color: transparent;
+	border: none;
+	color: transparent;
 }
