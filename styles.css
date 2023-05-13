@@ -125,4 +125,10 @@ footer {
 	.actual {
 		width: 100%;
 	}
+	.budgetInputWrapper {
+		width: 48%;
+	}
+	.budget {
+		height: 100%;
+	}
 }
