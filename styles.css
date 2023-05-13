@@ -46,9 +46,17 @@ main {
 }
 h3 {
 	width: 100%;
+	font-size: 2rem;
 	text-align: center;
 	text-decoration: underline;
 }
+h1 {
+	font-size: 2.2rem;
+}
+h4 {
+	font-size: 1.3rem;
+}
+
 .budgetInputWrapper {
 	overflow: auto;
 	height: 70%;
@@ -118,6 +126,13 @@ footer {
 	background-color: transparent;
 	border: none;
 	color: transparent;
+}
+
+#netIncome {
+	font-size: 1.2rem;
+	padding: 1%;
+	color: #11b211;
+	font-weight: bold;
 }
 
 @media screen and (max-width: 600px) {

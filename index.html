@@ -16,29 +16,28 @@
 			<section class="ideal">
 				<h3>Ideal Spending</h3>
 				<div>Net Income: $<input id="netIncome" type="number" /></div>
-				<div>(25%) Housing: $<span id="idealHousing"></span></div>
-				<div>(55%) Needs and Wants: $<span id="idealNAW"></span></div>
-				<div>(20%) Saving: $<span id="idealSaving"></span></div>
-				<div>(0%) Revolving Debt: $<span id="idealDebt"></span></div>
+				<div>Housing (25%): $<span id="idealHousing"></span></div>
+				<div>Needs and Wants (55%): $<span id="idealNAW"></span></div>
+				<div>Saving (20%): $<span id="idealSaving"></span></div>
+				<div>Revolving Debt (0%): $<span id="idealDebt"></span></div>
 			</section>
 			<section class="actual">
 				<h3>Actual Spending</h3>
 				<div>Total Spent: $<span id="moneySpent" type="number"></span></div>
 				<div>
-					<span class="percent" id="actualHousingPercent"></span> Housing:
+					Housing (<span class="percent" id="actualHousingPercent"></span>):
 					$<span id="actualHousing"></span>
 				</div>
 				<div>
-					<span class="percent" id="actualNAWPercent"></span> Needs and Wants:
+					Needs and Wants (<span class="percent" id="actualNAWPercent"></span>):
 					$<span id="actualNAW"></span>
 				</div>
 				<div>
-					<span class="percent" id="actualSavingPercent"></span> Saving: $<span
-						id="actualSaving"
-					></span>
+					Saving (<span class="percent" id="actualSavingPercent"></span>):
+					$<span id="actualSaving"></span>
 				</div>
 				<div>
-					<span class="percent" id="actualDebtPercent"></span> Revolving Debt:
+					Revolving Debt (<span class="percent" id="actualDebtPercent"></span>):
 					$<span id="actualDebt"></span>
 				</div>
 			</section>
@@ -46,23 +45,15 @@
 				<h3>Record of Spending</h3>
 				<div class="budgetInputWrapper" id="housingWrapper">
 					<h4>Housing</h4>
-					<input type="text" placeholder="Type Purchase Here" />
-					<input
-						type="number"
-						id="housingValue"
-						placeholder="Type Value Here"
-					/>
+					<input type="text" placeholder="Item" />
+					<input type="number" id="housingValue" placeholder="Cost" />
 					<button class="rowButton" id="housingButton">Add Row</button>
 				</div>
 				<div class="budgetInputWrapper">
 					<div class="budgetInputs" id="NAWWrapper">
 						<h4>Needs and Wants</h4>
-						<input type="text" placeholder="Type Purchase Here" />
-						<input
-							type="number"
-							class="NAWValue"
-							placeholder="Type Value Here"
-						/>
+						<input type="text" placeholder="Item" />
+						<input type="number" class="NAWValue" placeholder="Value" />
 					</div>
 
 					<button class="rowButton" id="NAWButton">Add Row</button>
@@ -70,24 +61,16 @@
 				<div class="budgetInputWrapper">
 					<div class="budgetInputs" id="savingsWrapper">
 						<h4>Savings</h4>
-						<input type="text" placeholder="Type Purchase Here" />
-						<input
-							type="number"
-							class="savingsValue"
-							placeholder="Type Value Here"
-						/>
+						<input type="text" placeholder="Item" />
+						<input type="number" class="savingsValue" placeholder="Value" />
 					</div>
 					<button class="rowButton" id="savingsButton">Add Row</button>
 				</div>
 				<div class="budgetInputWrapper">
 					<div class="budgetInputs" id="debtWrapper">
 						<h4>Revolving Debt</h4>
-						<input type="text" placeholder="Type Purchase Here" />
-						<input
-							type="number"
-							class="debtValue"
-							placeholder="Type Value Here"
-						/>
+						<input type="text" placeholder="Item" />
+						<input type="number" class="debtValue" placeholder="Value" />
 					</div>
 					<button class="rowButton" id="debtButton">Add Row</button>
 				</div>

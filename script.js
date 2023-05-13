@@ -29,16 +29,16 @@ let button = document.getElementById("calcButton");
 
 //calculates how much spend if budget goes perfect
 function calculateGoodPercents() {
-	let netIncome = parseInt(netIncomeBox.value).toFixed(2);
+	let netIncome = Math.round(parseInt(netIncomeBox.value));
 	console.log(netIncome);
 	let idealHousing = netIncome * 0.25;
 	let idealNAW = netIncome * 0.55;
 	let idealSavings = netIncome * 0.2;
 
-	idealHousingBox.innerHTML = idealHousing.toFixed(2);
-	idealNAWBox.innerHTML = idealNAW.toFixed(2);
-	idealSavingsBox.innerHTML = idealSavings.toFixed(2);
-	idealDebtBox.innerHTML = "0.00";
+	idealHousingBox.innerHTML = Math.round(idealHousing);
+	idealNAWBox.innerHTML = Math.round(idealNAW);
+	idealSavingsBox.innerHTML = Math.round(idealSavings);
+	idealDebtBox.innerHTML = "0";
 }
 
 netIncomeBox.addEventListener("input", () => {
@@ -61,7 +61,7 @@ button.addEventListener("click", () => {
 		} else {
 			savingsSpentValue += value;
 		}
-		let parsedSavings = parseInt(savingsSpentValue).toFixed(2);
+		let parsedSavings = Math.round(parseInt(savingsSpentValue));
 		actualSavingsBox.innerHTML = parsedSavings;
 	});
 
@@ -73,7 +73,7 @@ button.addEventListener("click", () => {
 		} else {
 			NAWSpentValue += value;
 		}
-		let parsedNAW = parseInt(NAWSpentValue).toFixed(2);
+		let parsedNAW = Math.round(parseInt(NAWSpentValue));
 		actualNAWBox.innerHTML = parsedNAW;
 	});
 
@@ -85,12 +85,12 @@ button.addEventListener("click", () => {
 		} else {
 			debtSpentValue += value;
 		}
-		let parsedDebt = parseInt(debtSpentValue).toFixed(2);
+		let parsedDebt = Math.round(parseInt(debtSpentValue));
 
 		actualDebtBox.innerHTML = parsedDebt;
 	});
 
-	let parsedHousing = parseInt(housingSpent.value).toFixed(2);
+	let parsedHousing = Math.round(parseInt(housingSpent.value));
 	if (isNaN(parsedHousing)) {
 		return;
 	} else {
@@ -104,18 +104,22 @@ button.addEventListener("click", () => {
 		parseInt(NAWSpentValue) +
 		parseInt(savingsSpentValue);
 	console.log(totalSpent);
-	spentBox.innerHTML = totalSpent.toFixed(2);
+	spentBox.innerHTML = totalSpent.toFixed(0);
 
-	let netIncome = parseInt(netIncomeBox.value).toFixed(2);
+	let netIncome = Math.round(parseInt(netIncomeBox.value));
 	let housingPercent = (housingSpent.value / netIncome) * 100;
 	let savingsPercent = (savingsSpentValue / netIncome) * 100;
 	let NAWPercent = (NAWSpentValue / netIncome) * 100;
 	let debtPercent = (debtSpentValue / netIncome) * 100;
 
-	actualHousingPercentBox.innerHTML = `${housingPercent.toFixed(0)}%`;
-	actualSavingsPercentBox.innerHTML = `${savingsPercent.toFixed(0)}%`;
-	actualNAWPercentBox.innerHTML = `${NAWPercent.toFixed(0)}%`;
-	actualDebtPercentBox.innerHTML = `${debtPercent.toFixed(0)}%`;
+	actualHousingPercentBox.innerHTML = `${Math.round(housingPercent)}%`;
+	actualSavingsPercentBox.innerHTML = `${Math.round(savingsPercent)}%`;
+	actualNAWPercentBox.innerHTML = `${Math.round(NAWPercent)}%`;
+	actualDebtPercentBox.innerHTML = `${Math.round(debtPercent)}%`;
+
+	NAWSpentValue = 0;
+	savingsSpentValue = 0;
+	debtSpentValue = 0;
 });
 
 //Add more buttons
