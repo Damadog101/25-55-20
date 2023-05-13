@@ -27,6 +27,7 @@ let debtSpentValue = 0;
 
 let button = document.getElementById("calcButton");
 
+//calculates how much spend if budget goes perfect
 function calculateGoodPercents() {
 	let netIncome = parseInt(netIncomeBox.value).toFixed(2);
 	console.log(netIncome);
@@ -44,7 +45,9 @@ netIncomeBox.addEventListener("input", () => {
 	calculateGoodPercents();
 });
 
+//calculate button
 button.addEventListener("click", () => {
+	//gets savings values
 	[...savingsSpent].forEach((item) => {
 		let value = parseInt(item.value);
 		if (isNaN(value)) {
@@ -55,6 +58,8 @@ button.addEventListener("click", () => {
 		let parsedSavings = parseInt(savingsSpentValue).toFixed(2);
 		actualSavingsBox.innerHTML = parsedSavings;
 	});
+
+	//gets needs/wants values
 	[...NAWSpent].forEach((item) => {
 		let value = parseInt(item.value);
 		if (isNaN(value)) {
@@ -65,6 +70,8 @@ button.addEventListener("click", () => {
 		let parsedNAW = parseInt(NAWSpentValue).toFixed(2);
 		actualNAWBox.innerHTML = parsedNAW;
 	});
+
+	//gets debt values
 	[...debtSpent].forEach((item) => {
 		let value = parseInt(item.value);
 		if (isNaN(value)) {
@@ -84,6 +91,7 @@ button.addEventListener("click", () => {
 		actualHousingBox.innerHTML = parsedHousing;
 	}
 
+	//calculates total
 	let totalSpent =
 		parseInt(housingSpent.value) +
 		parseInt(debtSpentValue) +
@@ -91,4 +99,15 @@ button.addEventListener("click", () => {
 		parseInt(savingsSpentValue);
 	console.log(totalSpent);
 	spentBox.innerHTML = totalSpent.toFixed(2);
+
+	let netIncome = parseInt(netIncomeBox.value).toFixed(2);
+	let housingPercent = (housingSpent.value / netIncome) * 100;
+	let savingsPercent = (savingsSpentValue / netIncome) * 100;
+	let NAWPercent = (NAWSpentValue / netIncome) * 100;
+	let debtPercent = (debtSpentValue / netIncome) * 100;
+
+	actualHousingPercentBox.innerHTML = `${housingPercent.toFixed(0)}%`;
+	actualSavingsPercentBox.innerHTML = `${savingsPercent.toFixed(0)}%`;
+	actualNAWPercentBox.innerHTML = `${NAWPercent.toFixed(0)}%`;
+	actualDebtPercentBox.innerHTML = `${debtPercent.toFixed(0)}%`;
 });

@@ -28,13 +28,20 @@ main {
 .actual {
 	width: 50%;
 	border: 1px solid black;
+	font-size: 1.3rem;
+}
+
+.ideal div,
+.actual div {
+	padding: 2%;
 }
 .budget {
 	width: 100%;
-	/* border: 1px solid black; */
+	border: 1px solid black;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
+	padding-bottom: 8%;
 }
 h3 {
 	width: 100%;
@@ -66,4 +73,10 @@ input {
 
 .rowButton {
 	padding: 0%;
+}
+footer {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	border: 1px solid black;
 }
