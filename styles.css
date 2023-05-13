@@ -119,3 +119,10 @@ footer {
 	border: none;
 	color: transparent;
 }
+
+@media screen and (max-width: 600px) {
+	.ideal,
+	.actual {
+		width: 100%;
+	}
+}
