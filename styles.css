@@ -145,6 +145,13 @@ footer {
 	display: flex;
 	flex-wrap: wrap;
 }
+.realPercent {
+	color: red;
+	background-color: pink;
+}
+.goodPercent {
+	background-color: yellow;
+}
 
 @media screen and (max-width: 600px) {
 	.ideal,
