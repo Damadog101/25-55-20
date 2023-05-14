@@ -27,6 +27,9 @@ let debtSpentValue = 0;
 
 let button = document.getElementById("calcButton");
 
+let inputs = document.querySelectorAll(".inputs");
+console.log(inputs);
+
 //calculates how much spend if budget goes perfect
 function calculateGoodPercents() {
 	let netIncome = Math.round(parseInt(netIncomeBox.value));
@@ -45,8 +48,7 @@ netIncomeBox.addEventListener("input", () => {
 	calculateGoodPercents();
 });
 
-//calculate button
-button.addEventListener("click", () => {
+function calcActualValues() {
 	//selects all items
 	let housingSpent = document.getElementById("housingValue");
 	let NAWSpent = document.querySelectorAll(".NAWValue");
@@ -120,21 +122,41 @@ button.addEventListener("click", () => {
 	NAWSpentValue = 0;
 	savingsSpentValue = 0;
 	debtSpentValue = 0;
+}
+
+//Calculates actual values
+[...inputs].forEach((input) => {
+	input.addEventListener("input", () => {
+		calcActualValues();
+	});
 });
+
+// //calculate button
+// button.addEventListener("click", () => {
+
+// });
 
 //Add more buttons
 function addRow(rowType) {
 	let textInput = document.createElement("input");
 	let numInput = document.createElement("input");
+
 	textInput.setAttribute("type", "text");
-	textInput.setAttribute("placeholder", "Type Purchase Here");
+	textInput.setAttribute("placeholder", "Item");
+
 	numInput.setAttribute("type", "number");
-	numInput.setAttribute("placeholder", "Type Value Here");
-	numInput.setAttribute("class", `${rowType}Value`);
+	numInput.setAttribute("placeholder", "Cost");
+	// numInput.classList.add("inputs");
+	numInput.setAttribute("class", `${rowType}Value inputs`);
+	numInput.addEventListener("input", () => {
+		calcActualValues();
+	});
 
 	let wrapper = document.getElementById(`${rowType}Wrapper`);
 	wrapper.appendChild(textInput);
 	wrapper.appendChild(numInput);
+
+	console.log(inputs);
 }
 // housingButton.addEventListener("click", () => {
 // 	addRow("housing");

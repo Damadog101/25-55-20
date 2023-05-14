@@ -19,22 +19,22 @@
 				<div class="totalOutputBox">
 					Net Income: $<input id="netIncome" type="number" />
 				</div>
-				<div>
+				<div class="bold">
 					Housing (<span class="goodPercent">25%</span>): $<span
 						id="idealHousing"
 					></span>
 				</div>
-				<div>
+				<div class="bold">
 					Needs and Wants (<span class="goodPercent">55%</span>): $<span
 						id="idealNAW"
 					></span>
 				</div>
-				<div>
+				<div class="bold">
 					Saving (<span class="goodPercent">20%</span>): $<span
 						id="idealSaving"
 					></span>
 				</div>
-				<div>
+				<div class="bold">
 					Revolving Debt (<span class="goodPercent">0%</span>): $<span
 						id="idealDebt"
 					></span>
@@ -45,22 +45,22 @@
 				<div class="totalOutputBox">
 					Total Spent: $<span id="moneySpent" type="number"></span>
 				</div>
-				<div>
+				<div class="bold">
 					Housing (<span class="realPercent" id="actualHousingPercent"></span>):
 					$<span id="actualHousing"></span>
 				</div>
-				<div>
+				<div class="bold">
 					Needs and Wants (<span
 						class="realPercent"
 						id="actualNAWPercent"
 					></span
 					>): $<span id="actualNAW"></span>
 				</div>
-				<div>
+				<div class="bold">
 					Saving (<span class="realPercent" id="actualSavingPercent"></span>):
 					$<span id="actualSaving"></span>
 				</div>
-				<div>
+				<div class="bold">
 					Revolving Debt (<span
 						class="realPercent"
 						id="actualDebtPercent"
@@ -74,7 +74,12 @@
 					<div class="budgetInputs">
 						<h4>Housing</h4>
 						<input type="text" placeholder="Item" />
-						<input type="number" id="housingValue" placeholder="Cost" />
+						<input
+							type="number"
+							class="inputs"
+							id="housingValue"
+							placeholder="Cost"
+						/>
 					</div>
 					<button class="rowButton" id="housingButton">Add Row</button>
 				</div>
@@ -82,7 +87,7 @@
 					<div class="budgetInputs" id="NAWWrapper">
 						<h4>Needs and Wants</h4>
 						<input type="text" placeholder="Item" />
-						<input type="number" class="NAWValue" placeholder="Cost" />
+						<input type="number" class="inputs NAWValue" placeholder="Cost" />
 					</div>
 
 					<button class="rowButton" id="NAWButton">Add Row</button>
@@ -91,7 +96,11 @@
 					<div class="budgetInputs" id="savingsWrapper">
 						<h4>Savings</h4>
 						<input type="text" placeholder="Item" />
-						<input type="number" class="savingsValue" placeholder="Cost" />
+						<input
+							type="number"
+							class="inputs savingsValue"
+							placeholder="Cost"
+						/>
 					</div>
 					<button class="rowButton" id="savingsButton">Add Row</button>
 				</div>
@@ -99,7 +108,7 @@
 					<div class="budgetInputs" id="debtWrapper">
 						<h4>Revolving Debt</h4>
 						<input type="text" placeholder="Item" />
-						<input type="number" class="debtValue" placeholder="Cost" />
+						<input type="number" class="inputs debtValue" placeholder="Cost" />
 					</div>
 					<button class="rowButton" id="debtButton">Add Row</button>
 				</div>

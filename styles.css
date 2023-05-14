@@ -130,8 +130,7 @@ footer {
 	color: transparent;
 }
 
-#netIncome,
-#moneySpent {
+#netIncome {
 	font-size: 1.2rem;
 	padding: 1%;
 	color: #11b211;
@@ -143,16 +142,34 @@ footer {
 	height: 26px;
 }
 
+#moneySpent {
+	display: flex;
+	align-items: center;
+	font-size: 1.2rem;
+	color: #11b211;
+	font-weight: bold;
+	background-color: white;
+	border: 1px solid black;
+	width: 200px;
+	height: 26px;
+	padding-left: 1%;
+}
+
 .totalOutputBox {
 	display: flex;
 	flex-wrap: wrap;
 }
 .realPercent {
-	color: red;
-	background-color: pink;
+	color: black;
+	background-color: yellow;
 }
 .goodPercent {
 	background-color: yellow;
+	color: black;
+}
+
+.bold {
+	font-weight: bold;
 }
 
 header {
@@ -163,9 +180,11 @@ header {
 }
 .normTitle {
 	width: 100%;
+	font-size: 1.3rem;
 }
 .mogra {
 	width: 100%;
+	font-size: 3rem;
 	font-family: "Mogra", cursive;
 }
 
@@ -174,7 +193,7 @@ header h1 {
 }
 
 h3 {
-	margin: 15px;
+	margin: 15px 0px;
 }
 
 @media screen and (max-width: 600px) {
