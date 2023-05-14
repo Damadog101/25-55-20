@@ -128,11 +128,22 @@ footer {
 	color: transparent;
 }
 
-#netIncome {
+#netIncome,
+#moneySpent {
 	font-size: 1.2rem;
 	padding: 1%;
 	color: #11b211;
 	font-weight: bold;
+	background-color: white;
+	border: 1px solid black;
+	width: 200px;
+	display: block;
+	height: 26px;
+}
+
+.totalOutputBox {
+	display: flex;
+	flex-wrap: wrap;
 }
 
 @media screen and (max-width: 600px) {
