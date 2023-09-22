@@ -93,9 +93,10 @@ input {
 }
 header,
 footer {
-	background-color: rgb(147, 201, 245);
+	background-color: #004751;
 	margin: 0px;
 	padding: 0.5%;
+	color: white;
 }
 button:hover,
 button:focus {
@@ -116,6 +117,20 @@ button {
 	font-weight: bold;
 	border-radius: 7px;
 	transition: all 0.2s ease;
+}
+
+.actual,
+.ideal {
+	background-color: lightgray;
+}
+
+.eagles {
+	max-width: 100%;
+}
+
+.eagleWrap,
+h1 {
+	width: 33%;
 }
 
 footer {
@@ -175,7 +190,7 @@ footer {
 header {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
 }
 .normTitle {
@@ -183,7 +198,6 @@ header {
 	font-size: 1.3rem;
 }
 .mogra {
-	width: 100%;
 	font-size: 3rem;
 	font-family: "Mogra", cursive;
 }
