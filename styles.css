@@ -129,7 +129,12 @@ button {
 }
 
 .eagles {
-	max-width: 100%;
+	width: 50%;
+}
+.eaglesWrap {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .eagleWrap,
