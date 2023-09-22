@@ -121,7 +121,7 @@ button {
 
 .actual,
 .ideal {
-	background-color: silver;
+	background-color: rgb(234, 234, 234);
 }
 
 .budget {
