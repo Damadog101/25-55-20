@@ -210,15 +210,29 @@ h3 {
 	margin: 15px 0px;
 }
 
+@media screen and (max-width: 800px) {
+	.mogra {
+		font-size: 2rem;
+	}
+}
+
 @media screen and (max-width: 600px) {
 	.ideal,
 	.actual {
 		width: 100%;
+	}
+	.mogra {
+		font-size: 1.5rem;
 	}
 	.budgetInputWrapper {
 		width: 48%;
 	}
 	.budget {
 		height: 100%;
+	}
+}
+@media screen and (max-width: 400px) {
+	.mogra {
+		font-size: 1rem;
 	}
 }
