@@ -247,4 +247,7 @@ h3 {
 	.mogra {
 		font-size: 1rem;
 	}
+	header {
+		padding: 2% 0.5%;
+	}
 }
