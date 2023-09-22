@@ -120,7 +120,8 @@ button {
 }
 
 .actual,
-.ideal {
+.ideal,
+.budget {
 	background-color: lightgray;
 }
 
