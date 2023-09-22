@@ -130,11 +130,13 @@ button {
 
 .eagles {
 	width: 50%;
+	display: none;
 }
 .eaglesWrap {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	display: none;
 }
 
 .eagleWrap,
@@ -201,6 +203,7 @@ header {
 	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
+	padding: 2% 0.5%;
 }
 .normTitle {
 	width: 100%;
