@@ -8,11 +8,14 @@ body {
 	margin: 0;
 	padding: 0;
 	max-height: calc(100vh - 3%);
-	background: linear-gradient(to right, rgb(221, 249, 249), rgb(208, 232, 240));
+	background-color: var(--grey);
+	/* background: linear-gradient(to right, rgb(221, 249, 249), rgb(208, 232, 240)); */
 }
 
 :root {
 	--blue: rgb(57, 123, 215);
+	--eagleGreen: #004751;
+	--grey: rgb(234, 234, 234);
 }
 
 header {
@@ -62,7 +65,6 @@ h4 {
 .budgetInputWrapper {
 	overflow: auto;
 	height: 70%;
-	/* border: 1px solid var(--blue); */
 	width: 24%;
 	display: flex;
 	flex-wrap: wrap;
@@ -93,7 +95,7 @@ input {
 }
 header,
 footer {
-	background-color: #004751;
+	background-color: var(--eagleGreen);
 	margin: 0px;
 	padding: 0.5%;
 	color: white;
@@ -120,12 +122,9 @@ button {
 }
 
 .actual,
-.ideal {
-	background-color: rgb(234, 234, 234);
-}
-
+.ideal,
 .budget {
-	background-color: rgb(234, 234, 234);
+	background-color: var(--grey);
 }
 
 .eagles {
